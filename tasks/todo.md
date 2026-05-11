@@ -38,3 +38,29 @@
 - 追加テスト: `tests/create-daily-plan-test.sh`
 - 自動テスト: `sh tests/create-daily-plan-test.sh` で作成と上書き防止を確認
 - 手動確認: `./scripts/create-daily-plan.sh` は既存の `workflows/daily/2026-05-11-daily-plan.md` を検知して停止
+
+---
+
+# TODO: Notion連携の運用モデル追加
+
+- [x] `company/notion-integration.md` を作成する
+- [x] `scripts/notion_sync_plan.py` を作成する
+- [x] `README.md` に Notion Integration セクションを追加する
+- [x] `CLAUDE.md` に Notion Integration Rule を追加する
+- [x] `reports/notion-sync-plan.md` の生成を検証する
+- [x] 変更をコミットする
+
+## 方針
+- GitHubをSource of Truthとして扱い、NotionはDaily Ops / Content Pipeline / Sales Knowledge / KPI Dashboardの閲覧・運用ビューに限定する
+- Notion API連携、APIキー、トークン、自動投稿、自動公開は追加しない
+- まずはMarkdownファイルを読み取り、`reports/notion-sync-plan.md` に同期計画を出す
+- 既存の同期計画は `--force` がない限り上書きしない
+
+## レビュー
+- 追加ドキュメント: `company/notion-integration.md`
+- 追加スクリプト: `scripts/notion_sync_plan.py`
+- 生成レポート: `reports/notion-sync-plan.md`
+- 検証: `python3 -m py_compile scripts/notion_sync_plan.py`
+- 検証: `python3 scripts/notion_sync_plan.py` で同期計画を生成
+- 検証: `python3 scripts/notion_sync_plan.py` の再実行で上書き防止を確認
+- 確認: APIキーやトークンの実値は追加していない

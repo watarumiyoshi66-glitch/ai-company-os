@@ -175,6 +175,18 @@
 
 ---
 
+## Notion Integration Rule
+
+- GitHub上のMarkdownをSource of Truthとし、Notionは運用ビューとして扱う
+- Notionの用途はDaily Ops、Content Pipeline、Sales Knowledge、KPI Dashboardに限定する
+- Notion API連携、APIキー、トークンは追加しない
+- 自動投稿・自動公開は行わない
+- Notionへ反映したい内容は、先にRepository内のMarkdownへ保存する
+- 同期計画が必要な場合は `scripts/notion_sync_plan.py` を使い、`reports/notion-sync-plan.md` を生成する
+- 既存の `reports/notion-sync-plan.md` は、明示的な `--force` なしに上書きしない
+
+---
+
 ## 守秘義務・匿名化ルール
 
 - **実在する顧客・案件・社名は絶対に記載しない**
