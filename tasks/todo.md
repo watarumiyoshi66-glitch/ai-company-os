@@ -16,3 +16,25 @@
 - スライド数: 12枚
 - 確認内容: PPTXの破損チェック、スライド数確認、表紙・ASIMO OS関連テキストの存在確認
 - 注意: この環境ではQuick Lookによる画像プレビュー生成がサンドボックス制約で失敗したため、PowerPoint上で最終の見た目確認を推奨
+
+---
+
+# TODO: Daily Plan作成補助スクリプト
+
+- [x] 作業用ブランチを作成する
+- [x] 期待動作を確認するテストを先に作成する
+- [x] テンプレートから今日の日付ファイルを作るスクリプトを追加する
+- [x] 既存ファイルを上書きしないことを検証する
+- [ ] 変更をコミットしてPRを作成する
+
+## 方針
+- `workflows/daily/daily-plan-template.md` を元に、`workflows/daily/YYYY-MM-DD-daily-plan.md` を作成する
+- 既に同名ファイルがある場合は停止し、内容を変更しない
+- 日付の差し替えはテンプレート内の `YYYY-MM-DD` を対象にする
+- 追加ライブラリなしで動くシェルスクリプトにする
+
+## レビュー
+- 追加スクリプト: `scripts/create-daily-plan.sh`
+- 追加テスト: `tests/create-daily-plan-test.sh`
+- 自動テスト: `sh tests/create-daily-plan-test.sh` で作成と上書き防止を確認
+- 手動確認: `./scripts/create-daily-plan.sh` は既存の `workflows/daily/2026-05-11-daily-plan.md` を検知して停止
