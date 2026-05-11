@@ -1,7 +1,9 @@
 # Daily Plan Template
 
-> 使い方：毎朝このテンプレートをコピーして `YYYY-MM-DD-daily-plan.md` として保存する。
-> 保存先：`/memory/daily-insights/YYYY-MM-DD.md`
+> 使い方：毎朝このテンプレートをコピーして以下に保存する。
+> Daily Plan保存先：`/workflows/daily/YYYY-MM-DD-daily-plan.md`
+> Daily Review保存先：`/reports/YYYY-MM-DD-daily-review.md`
+> 日次インサイト保存先：`/memory/daily-insights/YYYY-MM-DD.md`
 
 ---
 

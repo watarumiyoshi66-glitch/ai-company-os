@@ -62,6 +62,8 @@
 | Note記事リサーチ | `/content/note/research/topic-name.md` |
 | Note記事下書き | `/content/note/drafts/YYYY-MM-DD-title.md` |
 | Note公開済みアーカイブ | `/content/note/published/YYYY-MM-DD-title.md` |
+| Daily Plan | `/workflows/daily/YYYY-MM-DD-daily-plan.md` |
+| Daily Review | `/reports/YYYY-MM-DD-daily-review.md` |
 | 日次インサイト | `/memory/daily-insights/YYYY-MM-DD.md` |
 | 営業ナレッジ | `/memory/sales-knowledge/topic-name.md` |
 | 競合分析 | `/research/competitors/account-name.md` |
@@ -76,7 +78,8 @@
 
 ## Daily Plan作成ルール
 
-毎朝オーナーに確認を取り、以下の形式で作成する：
+毎朝オーナーに確認を取り、以下の形式で作成する。
+**保存先：`/workflows/daily/YYYY-MM-DD-daily-plan.md`**
 
 ```markdown
 # Daily Plan — YYYY-MM-DD
@@ -90,6 +93,7 @@
 
 ## リサーチ・インサイト収集
 - テーマ：
+- 保存先：/memory/daily-insights/YYYY-MM-DD.md
 
 ## その他タスク
 - [ ] 
@@ -101,7 +105,8 @@
 
 ## Daily Review作成ルール
 
-毎晩オーナーに確認を取り、以下の形式で作成する：
+毎晩オーナーに確認を取り、以下の形式で作成する。
+**保存先：`/reports/YYYY-MM-DD-daily-review.md`**
 
 ```markdown
 # Daily Review — YYYY-MM-DD
