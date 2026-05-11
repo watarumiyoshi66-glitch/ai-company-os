@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# System folders
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+
+# Image files (canvas screenshots etc.)
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Other projects (managed separately)
+nikkei-app/
+note-x-content-company-os/
+solo-company-os/
+outputs/
+
+# Environment / secrets
+.env
+*.key
+*.pem
+
+# Node / Python
+node_modules/
+__pycache__/
+.venv/
