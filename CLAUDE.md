@@ -58,6 +58,10 @@
 | コンテンツ種別 | 保存先 |
 |---|---|
 | X投稿下書き | `/content/x/drafts/YYYY-MM-DD-topic.md` |
+| デザインブリーフ・画像プロンプト | `/content/design/YYYY-MM-DD-topic-design-brief.md` |
+| グロースレポート | `/reports/growth/YYYY-MM-DD-growth-report.md` |
+| 市場インテリジェンスレポート | `/research/market/YYYY-MM-DD-market-intel.md` |
+| 商品設計書 | `/products/product-name.md` |
 | X投稿パフォーマンス | `/content/x/performance/YYYY-MM-DD.md` |
 | Note記事リサーチ | `/content/note/research/topic-name.md` |
 | Note記事下書き | `/content/note/drafts/YYYY-MM-DD-title.md` |

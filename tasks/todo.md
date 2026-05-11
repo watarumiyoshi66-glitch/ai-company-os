@@ -64,3 +64,23 @@
 - 検証: `python3 scripts/notion_sync_plan.py` で同期計画を生成
 - 検証: `python3 scripts/notion_sync_plan.py` の再実行で上書き防止を確認
 - 確認: APIキーやトークンの実値は追加していない
+
+---
+
+# TODO: Executive Secretary追加
+
+- [x] `agents/specs/ai-employees.md` に秘書官を追加する
+- [x] `README.md` のAI社員一覧とDaily Workflowに秘書官を反映する
+- [x] 毎日の秘書報告テンプレートを追加する
+- [x] 差分を確認し、役割・保存先・報告内容が一貫しているか検証する
+
+## 方針
+- 秘書官は「全AI社員の活動を横断して把握し、毎日オーナーに報告する役」にする
+- 報告は事実・未完了・判断事項を分け、ビジネス判断に使える形にする
+- 保存先は `/reports/daily-briefings/` に統一する
+
+## レビュー
+- 追加社員: `Executive Secretary`
+- 追加テンプレート: `reports/daily-briefings/secretary-briefing-template.md`
+- 反映箇所: `agents/specs/ai-employees.md`、`README.md`
+- 確認: 社員一覧、Daily Workflow、保存先、報告項目が `/reports/daily-briefings/` で一貫している

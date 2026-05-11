@@ -40,6 +40,12 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 | Sales Strategist | 営業ナレッジの整理・体系化 | `/memory/sales-knowledge/` |
 | Workflow Builder | SOP・自動化フローの設計 | `/workflows/` |
 | Weekly Reporter | 週次レビューの作成 | `/reports/` |
+| Executive Secretary | 全AI社員の活動把握・日次報告 | `/reports/daily-briefings/` |
+| Visual Designer | 投稿用画像のデザイン仕様・生成プロンプト作成 | `/content/design/` |
+| Growth Analyst | X・Noteのパフォーマンス分析・改善提案 | `/reports/growth/` |
+| Monetization Strategist | 有料コンテンツ・ワークフロー販売の設計 | `/products/` |
+| Content Editor | X投稿・Note記事の品質チェック・改善 | `/content/` |
+| Market Researcher | グローバルAI活用・産業動向の収集・要約 | `/research/market/` |
 
 ---
 
@@ -48,11 +54,15 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 ```
 07:00  Daily Plan作成（Claude）
        └─ 当日のX投稿・リサーチ・タスクを確認
+07:15  秘書官による朝のブリーフィング
+       └─ 今日の優先事項・判断事項・未完了タスクを整理
 08:00  X投稿（下書き確認 → 人間承認 → 投稿）
 12:00  リサーチ・インサイト収集（Claude）
        └─ /memory/daily-insights/ に保存
 21:00  Daily Review作成（Claude）
        └─ 成果・学び・翌日タスクを記録
+21:15  秘書官による日次報告
+       └─ 全AI社員の活動・成果物・未完了タスクを /reports/daily-briefings/ に記録
 ```
 
 ---
