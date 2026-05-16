@@ -10,36 +10,36 @@
 
 | 優先 | 会社 | 地域 | 区分 | 何系 | 状態 | メモ/出典 |
 |---:|---|---|---|---|---|---|
-| 1 | Salesforce（Einstein Copilot/Agentforce） | US | 大中企業 | CRM内AIアシスタント | Todo | https://www.salesforce.com/news/press-releases/2024/04/25/einstein-copilot-general-availability/ |
-| 2 | Gong | US | スタートアップ（成長企業） | Revenue AI（会話/イネーブル） | Todo | https://www.gong.io/press/gong-launches-mission-andromeda-expanding-its-revenue-ai-os-to-enablement-and-account-management |
-| 3 | Spara | US | スタートアップ | インバウンド営業の会話エージェント | Todo | https://www.businessinsider.com/spara-stealth-ai-sales-startup-15-million-seed-2025-9 |
-| 4 | Synthflow AI | EU | スタートアップ | 音声エージェント（コール/予約） | Todo | https://www.businessinsider.com/synthflow-ai-pitch-deck-funding-voice-2025-6 |
-| 5 | Freshworks（Freshsales / Freddy AI） | Global | 大中企業 | CRM内AI（スコア/自動化） | Todo | https://www.techradar.com/reviews/freshsales-crm-review |
-| 6 | HubSpot（Breeze） | US | 大中企業 | GTM（Sales/Service）内AI | Todo | https://ir.hubspot.com/news-releases/news-release-details/hubspot-launches-new-ai-breeze-plus-hundreds-product-updates/ |
-| 7 | Microsoft（Microsoft 365 Copilot for Sales） | US | 大中企業 | 営業Copilot（Outlook/Teams/CRM連携） | Todo | https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2024/02/01/microsoft-copilot-for-sales-and-copilot-for-service-are-now-generally-available/ |
-| 8 | 6sense | US | スタートアップ（成長企業） | 予測/インテント×GTM | Todo | https://6sense.com/newsroom/6sense-surpasses-200m-arr-driven-by-sales-intelligence-innovation-and-market-share-expansion/ |
-| 9 | Clari | US | スタートアップ（成長企業） | Revenue Platform（予実/予測） | Todo | https://www.clari.com/press/clari-is-first-to-surpass-4t-in-revenue-under-management/ |
-| 10 | Salesloft | US | スタートアップ（成長企業） | セールスエンゲージメント×AI | Todo | https://www.salesloft.com/ai-at-salesloft |
-| 11 | （要調査） | US | スタートアップ | 提案書/見積の自動化 | Todo | 未確認（次回調査） |
-| 12 | （要調査） | JP | 大中企業 | SFA/CRM内AI | Todo | 未確認（次回調査） |
-| 13 | （要調査） | Asia | 大中企業 | メッセージング×営業AI | Todo | 未確認（次回調査） |
-| 14 | （要調査） | EU | スタートアップ | コンプラ/監査×営業AI | Todo | 未確認（次回調査） |
-| 15 | （要調査） | US | 大中企業 | コンタクトセンター/営業連携 | Todo | 未確認（次回調査） |
-| 16 | （要調査） | US | スタートアップ | パイプライン予測/RevOps | Todo | 未確認（次回調査） |
-| 17 | （要調査） | JP | スタートアップ | 音声/面談要約→CRM | Todo | 未確認（次回調査） |
-| 18 | （要調査） | Asia | スタートアップ | WhatsApp/LINE営業 | Todo | 未確認（次回調査） |
-| 19 | （要調査） | Africa | 大中企業 | 金融/通信の営業DX | Todo | 未確認（次回調査） |
-| 20 | （要調査） | EU | スタートアップ | コールセンター→営業転換 | Todo | 未確認（次回調査） |
-| 21 | （要調査） | US | スタートアップ | ウェブ接客→商談化 | Todo | 未確認（次回調査） |
-| 22 | （要調査） | JP | 大中企業 | SI/コンサル | Todo | 未確認（次回調査） |
-| 23 | （要調査） | EU | 大中企業 | SI/コンサル | Todo | 未確認（次回調査） |
-| 24 | （要調査） | US | 大中企業 | SI/コンサル | Todo | 未確認（次回調査） |
-| 25 | （要調査） | US | スタートアップ | RFP/提案自動化 | Todo | 未確認（次回調査） |
-| 26 | （要調査） | JP | スタートアップ | ABM/営業AI | Todo | 未確認（次回調査） |
-| 27 | （要調査） | Asia | 大中企業 | CRM | Todo | 未確認（次回調査） |
-| 28 | （要調査） | EU | スタートアップ | リード獲得 | Todo | 未確認（次回調査） |
-| 29 | （要調査） | Africa | スタートアップ | リード獲得 | Todo | 未確認（次回調査） |
-| 30 | （要調査） | Global | 大中企業 | オフィススイート連携 | Todo | 未確認（次回調査） |
+| 1 | Salesforce（Einstein Copilot/Agentforce） | US | 大中企業 | CRM内AIアシスタント | **Done** | https://www.salesforce.com/news/press-releases/2024/04/25/einstein-copilot-general-availability/ |
+| 2 | Gong | US | スタートアップ（成長企業） | Revenue AI（会話/イネーブル） | **Done** | https://www.gong.io/press/gong-launches-mission-andromeda-expanding-its-revenue-ai-os-to-enablement-and-account-management |
+| 3 | Spara | US | スタートアップ | インバウンド営業の会話エージェント | **Done** | https://www.businessinsider.com/spara-stealth-ai-sales-startup-15-million-seed-2025-9 |
+| 4 | Synthflow AI | EU | スタートアップ | 音声エージェント（コール/予約） | **Done** | https://www.businessinsider.com/synthflow-ai-pitch-deck-funding-voice-2025-6 |
+| 5 | Freshworks（Freshsales / Freddy AI） | Global | 大中企業 | CRM内AI（スコア/自動化） | **Done** | https://www.techradar.com/reviews/freshsales-crm-review |
+| 6 | HubSpot（Breeze） | US | 大中企業 | GTM（Sales/Service）内AI | **Done** | https://ir.hubspot.com/news-releases/news-release-details/hubspot-launches-new-ai-breeze-plus-hundreds-product-updates/ |
+| 7 | Microsoft（Microsoft 365 Copilot for Sales） | US | 大中企業 | 営業Copilot（Outlook/Teams/CRM連携） | **Done** | https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2024/02/01/microsoft-copilot-for-sales-and-copilot-for-service-are-now-generally-available/ |
+| 8 | 6sense | US | スタートアップ（成長企業） | 予測/インテント×GTM | **Done** | https://6sense.com/newsroom/6sense-surpasses-200m-arr-driven-by-sales-intelligence-innovation-and-market-share-expansion/ |
+| 9 | Clari | US | スタートアップ（成長企業） | Revenue Platform（予実/予測） | **Done** | https://www.clari.com/press/clari-is-first-to-surpass-4t-in-revenue-under-management/ |
+| 10 | Salesloft | US | スタートアップ（成長企業） | セールスエンゲージメント×AI | **Done** | https://www.salesloft.com/ai-at-salesloft |
+| 11 | DealHub | US | スタートアップ | CPQ/Quote automation AI | **Done** | — |
+| 12 | GENIEE SFA/CRM | JP | 大中企業 | SFA/CRM内AI | **Done** | — |
+| 13 | LINE Works | KR/JP | 大中企業 | メッセージング×営業AI（アジア） | **Done** | — |
+| 14 | Cognism | UK/EU | スタートアップ | GDPR準拠 B2B Lead Gen AI | **Done** | — |
+| 15 | Genesys | US | 大中企業 | コンタクトセンターAI+営業連携 | **Done** | — |
+| 16 | People.ai | US | スタートアップ | RevOps / Pipeline AI | **Done** | — |
+| 17 | Notta | JP | スタートアップ | 音声録音→AI要約→CRM連携 | **Done** | — |
+| 18 | respond.io | HK/Asia | スタートアップ | WhatsApp/LINE 営業メッセージAI | **Done** | — |
+| 19 | MTN Group | Africa | 大中企業 | Finance/Telecom 営業DX | **Done** | — |
+| 20 | Aircall | FR/EU | スタートアップ | コールセンター+Sales AI | **Done** | — |
+| 21 | Qualified | US | スタートアップ | Web engagement → Deal creation AI | **Done** | — |
+| 22 | NTT DATA | JP | 大中企業 | SI/Consulting AI | **Done** | — |
+| 23 | Capgemini | FR/EU | 大中企業 | SI/Consulting AI | **Done** | — |
+| 24 | Accenture | US/Global | 大中企業 | SI/Consulting AI | **Done** | — |
+| 25 | Responsive (RFPIO) | US | スタートアップ | RFP自動化AI | **Done** | — |
+| 26 | FORCAS | JP | スタートアップ | ABM / 企業情報AI | **Done** | — |
+| 27 | Zoho CRM | India/Asia | 大中企業 | CRM AI（Asia中心） | **Done** | — |
+| 28 | Lusha | IL/EU | スタートアップ | B2B Lead Generation AI | **Done** | — |
+| 29 | Terragon Group | Nigeria/Africa | スタートアップ | Data-driven marketing / Lead Gen | **Done** | — |
+| 30 | Google Workspace (Gemini) | US/Global | 大中企業 | Office suite × 営業AI統合 | **Done** | — |
 
 ---
 

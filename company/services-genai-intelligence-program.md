@@ -6,6 +6,29 @@
 
 ---
 
+## 運用ステータス
+
+| 項目 | 状態 |
+|---|---|
+| プログラム | **Active（2026-05-17 運用開始）** |
+| 攻略ウェッジ | Sales（営業）×生成AI |
+| 企業カード | 30社目標 → 進捗は `intel/services-genai/sales/company-list-queue.md` |
+| 有料Note | 3本比較 → 1本に絞って執筆開始 |
+| 日次SOP | `workflows/daily/services-genai-intel-loop.md` |
+
+**担当AI社員（確定）：**
+
+| 役割 | 担当 |
+|---|---|
+| 市場収集・整理 | Market Researcher |
+| 数字・確度管理 | Growth Analyst |
+| フック・拡散設計 | Viral Growth Producer |
+| 誇大/リスクゲート | Content Editor |
+| 商品化設計 | Monetization Strategist |
+| CEOへの日次要約 | Executive Secretary |
+
+---
+
 ## 対象スコープ（確定）
 
 - 地域：アメリカ / 日本 / EU / アジア / アフリカ

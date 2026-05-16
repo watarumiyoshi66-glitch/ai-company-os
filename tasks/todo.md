@@ -299,10 +299,10 @@
 
 # TODO: Services×GenAI 世界インテリジェンス（有料Note→ソフトウェア）
 
-- [ ] `company/services-genai-intelligence-program.md` を運用開始（Teamの担当と成果物を固定）
-- [ ] 日次SOPを毎日回す（`workflows/daily/services-genai-intel-loop.md`）
-- [ ] 企業カードをまず30枚作る（スタートアップ20＋大中企業10）
-- [ ] 有料Note候補を3本作り、1本に絞る（導線：有料Note→テンプレ→ソフト）
+- [x] `company/services-genai-intelligence-program.md` を運用開始（Teamの担当と成果物を固定）
+- [ ] 日次SOPを毎日回す（`workflows/daily/services-genai-intel-loop.md`）— 運用コミット（毎日実行）
+- [x] 企業カードをまず30枚作る（スタートアップ20＋大中企業10）
+- [x] 有料Note候補を3本作り、1本に絞る（導線：有料Note→テンプレ→ソフト）— 推奨：v3（体験記型）
 
 ## 方針
 - 「全部集める」ではなく、**意思決定に必要な情報セット**に圧縮する
