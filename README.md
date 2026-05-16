@@ -40,6 +40,12 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 | Sales Strategist | 営業ナレッジの整理・体系化 | `/memory/sales-knowledge/` |
 | Workflow Builder | SOP・自動化フローの設計 | `/workflows/` |
 | Weekly Reporter | 週次レビューの作成 | `/reports/` |
+| Executive Secretary | 全AI社員の活動把握・日次報告 | `/reports/daily-briefings/` |
+| Visual Designer | 投稿用画像のデザイン仕様・生成プロンプト作成 | `/content/design/` |
+| Growth Analyst | X・Noteのパフォーマンス分析・改善提案 | `/reports/growth/` |
+| Monetization Strategist | 有料コンテンツ・ワークフロー販売の設計 | `/products/` |
+| Content Editor | X投稿・Note記事の品質チェック・改善 | `/content/` |
+| Market Researcher | グローバルAI活用・産業動向の収集・要約 | `/research/market/` |
 
 ---
 
@@ -48,11 +54,15 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 ```
 07:00  Daily Plan作成（Claude）
        └─ 当日のX投稿・リサーチ・タスクを確認
+07:15  秘書官による朝のブリーフィング
+       └─ 今日の優先事項・判断事項・未完了タスクを整理
 08:00  X投稿（下書き確認 → 人間承認 → 投稿）
 12:00  リサーチ・インサイト収集（Claude）
        └─ /memory/daily-insights/ に保存
 21:00  Daily Review作成（Claude）
        └─ 成果・学び・翌日タスクを記録
+21:15  秘書官による日次報告
+       └─ 全AI社員の活動・成果物・未完了タスクを /reports/daily-briefings/ に記録
 ```
 
 ---
@@ -102,6 +112,28 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 3. 分析          差別化ポイント・参考要素を抽出
 4. 戦略反映      /company/ の戦略ドキュメントに反映
 ```
+
+---
+
+## Notion Integration
+
+GitHubをSource of Truthとし、Notionは日々の運用を見やすくするためのビューとして使う。
+Notion API連携はまだ実装せず、まずはMarkdownの同期計画を `reports/notion-sync-plan.md` に出力する。
+
+| Notion Area | 用途 | GitHub上の対象 |
+|---|---|---|
+| Daily Ops | Daily Plan、Daily Review、日次実行状況の確認 | `/workflows/daily/`, `/reports/` |
+| Content Pipeline | X投稿・Note記事の下書き管理 | `/content/x/drafts/`, `/content/note/drafts/` |
+| Sales Knowledge | 営業ナレッジの検索・再利用 | `/memory/sales-knowledge/` |
+| KPI Dashboard | 週次・月次の成果確認 | `/reports/` |
+
+運用ルール：
+- APIキーやトークンはRepositoryに追加しない
+- Notionへの自動投稿・自動公開は行わない
+- Notion上の編集は正本にせず、必要な変更はMarkdownへ戻す
+- 同期計画は `python3 scripts/notion_sync_plan.py` で生成する
+
+詳細は `/company/notion-integration.md` を参照。
 
 ---
 
@@ -179,3 +211,4 @@ ai-company-os/
 | ChatGPT | アイデア発散・下書き補助 |
 | Codex | 自動化・スクリプト |
 | GitHub | バージョン管理・知識資産管理 |
+| Notion | Daily Ops・Content Pipeline・Sales Knowledge・KPI Dashboardの運用ビュー |

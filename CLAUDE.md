@@ -58,6 +58,10 @@
 | コンテンツ種別 | 保存先 |
 |---|---|
 | X投稿下書き | `/content/x/drafts/YYYY-MM-DD-topic.md` |
+| デザインブリーフ・画像プロンプト | `/content/design/YYYY-MM-DD-topic-design-brief.md` |
+| グロースレポート | `/reports/growth/YYYY-MM-DD-growth-report.md` |
+| 市場インテリジェンスレポート | `/research/market/YYYY-MM-DD-market-intel.md` |
+| 商品設計書 | `/products/product-name.md` |
 | X投稿パフォーマンス | `/content/x/performance/YYYY-MM-DD.md` |
 | Note記事リサーチ | `/content/note/research/topic-name.md` |
 | Note記事下書き | `/content/note/drafts/YYYY-MM-DD-title.md` |
@@ -172,6 +176,18 @@
 3. 個人への批判・誹謗中傷は一切書かない
 4. 差別化に活かす観点で整理する
 5. 月1回更新を目安とする
+
+---
+
+## Notion Integration Rule
+
+- GitHub上のMarkdownをSource of Truthとし、Notionは運用ビューとして扱う
+- Notionの用途はDaily Ops、Content Pipeline、Sales Knowledge、KPI Dashboardに限定する
+- Notion API連携、APIキー、トークンは追加しない
+- 自動投稿・自動公開は行わない
+- Notionへ反映したい内容は、先にRepository内のMarkdownへ保存する
+- 同期計画が必要な場合は `scripts/notion_sync_plan.py` を使い、`reports/notion-sync-plan.md` を生成する
+- 既存の `reports/notion-sync-plan.md` は、明示的な `--force` なしに上書きしない
 
 ---
 
