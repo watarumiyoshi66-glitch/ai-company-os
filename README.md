@@ -46,6 +46,7 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 | Monetization Strategist | 有料コンテンツ・ワークフロー販売の設計 | `/products/` |
 | Content Editor | X投稿・Note記事の品質チェック・改善 | `/content/` |
 | Market Researcher | グローバルAI活用・産業動向の収集・要約 | `/research/market/` |
+| Viral Growth Producer | X・Noteを拡散されやすい切り口へ変換 | `/content/growth/` |
 
 ---
 
@@ -63,7 +64,36 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
        └─ 成果・学び・翌日タスクを記録
 21:15  秘書官による日次報告
        └─ 全AI社員の活動・成果物・未完了タスクを /reports/daily-briefings/ に記録
+21:30  AI経営会議
+       └─ 収益改善・チーム改善・社長判断事項を /reports/boardroom/ と /reports/ceo-office/ に記録
 ```
+
+---
+
+## AI Executive Board Room / CEO Office
+
+AI社員は毎日、`AI Executive Board Room` で収益改善とチーム改善を議論する。
+会議内容はExecutive Secretaryが整理し、社長室である `CEO Office` にオーナー向けの要約として報告する。
+
+| 場所 | 用途 | 保存先 |
+|---|---|---|
+| AI Executive Board Room | AI社員同士の経営会議 | `/company/ai-boardroom.md` |
+| CEO Office | 秘書官による社長向け報告 | `/company/ceo-office.md` |
+| 会議ログ | 毎日の議論・決定事項 | `/reports/boardroom/` |
+| 社長室報告 | オーナー判断用の要約 | `/reports/ceo-office/` |
+| 改善バックログ | 毎日の改善案と実行状況 | `/tasks/ai-improvement-backlog.md` |
+
+---
+
+## Social Accounts
+
+| 媒体 | URL | 用途 |
+|---|---|---|
+| X | https://x.com/Yosshi159971 | 認知拡大・Note送客 |
+| Note | https://note.com/genial_phlox6211 | 信頼形成・収益化 |
+
+毎日のAI経営会議で、Growth AnalystとViral Growth Producerが投稿・記事の反応と翌日の伸ばす切り口を確認する。
+詳細は `/company/social-accounts.md` を参照。
 
 ---
 
@@ -86,9 +116,10 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 2. リサーチ      /content/note/research/ に素材収集
 3. 構成設計      見出し・章立て・CTA設計
 4. 執筆          /content/note/drafts/ に下書き保存
-5. 編集・校正    Claude によるトーン・構造チェック
-6. 人間確認      オーナーがレビュー・修正
-7. 公開          /content/note/published/ にアーカイブ
+5. バズ化設計    タイトル・導入・SNS告知の切り口を強化
+6. 編集・校正    Claude によるトーン・構造・安全性チェック
+7. 人間確認      オーナーがレビュー・修正
+8. 公開          /content/note/published/ にアーカイブ
 ```
 
 ---
@@ -98,8 +129,9 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 ```
 1. ネタ収集      daily-insights / 営業経験 / ニュース
 2. 下書き作成    /content/x/drafts/ に保存
-3. 人間確認      トーン・事実確認
-4. 投稿          投稿後パフォーマンスを /content/x/performance/ に記録
+3. バズ化設計    Viral Growth Producerがフック・切り口を強化
+4. 人間確認      トーン・事実確認
+5. 投稿          投稿後パフォーマンスを /content/x/performance/ に記録
 ```
 
 ---
@@ -122,7 +154,7 @@ Notion API連携はまだ実装せず、まずはMarkdownの同期計画を `rep
 
 | Notion Area | 用途 | GitHub上の対象 |
 |---|---|---|
-| Daily Ops | Daily Plan、Daily Review、日次実行状況の確認 | `/workflows/daily/`, `/reports/` |
+| Daily Ops | Daily Plan、Daily Review、秘書官の日次報告、日次実行状況の確認 | `/workflows/daily/`, `/reports/`, `/reports/daily-briefings/` |
 | Content Pipeline | X投稿・Note記事の下書き管理 | `/content/x/drafts/`, `/content/note/drafts/` |
 | Sales Knowledge | 営業ナレッジの検索・再利用 | `/memory/sales-knowledge/` |
 | KPI Dashboard | 週次・月次の成果確認 | `/reports/` |
@@ -132,6 +164,7 @@ Notion API連携はまだ実装せず、まずはMarkdownの同期計画を `rep
 - Notionへの自動投稿・自動公開は行わない
 - Notion上の編集は正本にせず、必要な変更はMarkdownへ戻す
 - 同期計画は `python3 scripts/notion_sync_plan.py` で生成する
+- 秘書官はDaily Ops上で、朝に「今日やること」、夜に「今日やったこと・翌日の準備」を報告する
 
 詳細は `/company/notion-integration.md` を参照。
 

@@ -183,6 +183,8 @@
 
 - GitHub上のMarkdownをSource of Truthとし、Notionは運用ビューとして扱う
 - Notionの用途はDaily Ops、Content Pipeline、Sales Knowledge、KPI Dashboardに限定する
+- Daily Opsでは、秘書官が朝に「今日やること」、夜に「今日やったこと・翌日の準備」を報告する
+- 秘書官の日次報告は `/reports/daily-briefings/YYYY-MM-DD-secretary-briefing.md` に保存し、NotionのDaily Opsで確認する
 - Notion API連携、APIキー、トークンは追加しない
 - 自動投稿・自動公開は行わない
 - Notionへ反映したい内容は、先にRepository内のMarkdownへ保存する

@@ -36,6 +36,11 @@ SYNC_TARGETS = (
         directory=Path("reports"),
     ),
     SyncTarget(
+        area="Daily Ops",
+        purpose="秘書官の朝ブリーフィング、夜のデイリーレポート、翌日準備の確認",
+        directory=Path("reports/daily-briefings"),
+    ),
+    SyncTarget(
         area="Content Pipeline",
         purpose="X投稿下書きの進行状況確認",
         directory=Path("content/x/drafts"),

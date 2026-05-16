@@ -18,7 +18,7 @@ GitHubに保存されたMarkdownを正本とし、NotionはDaily Ops、Content P
 
 | Notion Area | 目的 | GitHub上の対象 |
 |---|---|---|
-| Daily Ops | 今日の計画、レビュー、実行状況を見る | `workflows/daily/`, `reports/` |
+| Daily Ops | 今日の計画、レビュー、秘書官の日次報告、実行状況を見る | `workflows/daily/`, `reports/`, `reports/daily-briefings/` |
 | Content Pipeline | X投稿とNote記事の下書き状況を見る | `content/x/drafts/`, `content/note/drafts/` |
 | Sales Knowledge | 営業ナレッジを検索・参照しやすくする | `memory/sales-knowledge/` |
 | KPI Dashboard | 週次・月次の成果や改善点を見る | `reports/` |
@@ -30,6 +30,20 @@ GitHubに保存されたMarkdownを正本とし、NotionはDaily Ops、Content P
 3. 自動投稿・自動公開は行わない
 4. APIキー、トークン、顧客情報、社内機密は保存しない
 5. Notion連携の初期段階では、同期計画Markdownのみを生成する
+
+## Daily Ops / Executive Secretary
+
+秘書官は、Daily Digest配下のDaily Opsを通じて毎日2回報告する。
+
+| タイミング | Notion上の用途 | GitHub保存先 |
+|---|---|---|
+| 07:15 朝のブリーフィング | 今日やること、オーナー判断事項、昨日からの持ち越しを確認する | `reports/daily-briefings/YYYY-MM-DD-secretary-briefing.md` |
+| 21:15 夜のデイリーレポート | 今日やったこと、未完了、翌日に備えることを確認する | `reports/daily-briefings/YYYY-MM-DD-secretary-briefing.md` |
+
+Notionページ：
+- Daily Digest: `https://www.notion.so/35857d023d6481b28ad9e31eeff8c823`
+- Daily Ops: `https://www.notion.so/35d57d023d648145b996fcf1fc80ae59`
+- Executive Secretary Briefing: `https://www.notion.so/35d57d023d6481ff862dff60276c3dee`
 
 ## Sync Planning
 
