@@ -54,6 +54,17 @@
 
 ---
 
+## Codexレビュー
+
+| 項目 | 内容 |
+|---|---|
+| 対象 | `/research/market/YYYY-MM-DD-market-intel.md` / `/research/competitors/` / `/intel/services-genai/` |
+| 観点 | 出典 / 事実性 / X投稿転用性 / Note企画化 / 商品化 |
+| 展開先 | `/content/x/drafts/` / `/content/note/research/` / `/products/` |
+| 判断事項 | `tasks/owner-decisions.md` に記録 |
+
+---
+
 ## 営業ナレッジ記録（該当日のみ）
 
 - トピック：

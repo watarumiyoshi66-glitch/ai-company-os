@@ -104,6 +104,69 @@
 
 ---
 
+## Claude Code Remote との連携ルール
+
+### 役割分担
+- Claude Code Remote は毎朝7:07 JSTの `daily-intel-loop` で市場調査・競合チェックを担当する
+- Codex は Claude Code Remote が作成した `/research/` 配下の成果物をレビュー・整理・再利用する
+- Codex は調査成果を、X投稿案・Note企画・運用改善・自動化に変換する
+
+### Codex の担当範囲
+1. `/research/market/` の調査レポート品質チェック
+2. `/research/competitors/` の競合分析整理
+3. 調査結果から `/content/x/drafts/` へのX投稿案作成
+4. 調査結果から `/content/note/research/` へのNote企画素材化
+5. `/workflows/daily/codex-research-review-sop.md` に従ったレビュー結果の記録
+6. `agents/specs/quality-scorecards.md` のCodexレビュー専用スコアカードによる品質採点
+7. `/reports/automation-memory/claude-codex-handoff-memory.md` への改善メモ記録
+8. `/tasks/owner-decisions.md` へのオーナー判断事項の集約
+9. 繰り返し作業のスクリプト化・GitHub Actions化
+10. `tasks/todo.md` への作業記録とレビュー追記
+
+### レビュー観点
+- 出典URLがあるか
+- 推測と事実が分かれているか
+- 未確認情報が「未確認」と明記されているか
+- X投稿・Note記事に転用できる切り口があるか
+- AI Company OSの既存方針と矛盾していないか
+- 有料Note・テンプレート・ソフトウェア仮説へ接続できるか
+- Claude Code Remoteの次回出力を改善できる示唆があるか
+
+### 品質スコア
+- Codexレビューは100点満点で採点する
+- 80点以上：そのまま再利用可能
+- 70〜79点：軽微な修正後に再利用可能
+- 60〜69点：再調査または再構成が必要
+- 59点以下：Claude Code Remoteの次回プロンプト改善候補として記録する
+- 安全性または事実性が重大に弱い場合は、点数に関係なく使用不可にする
+
+### Claude → Codex → Claude 改善ループ
+1. Claude Code Remote が `daily-intel-loop` で調査・初稿を作る
+2. Codex が品質スコア、再利用性、重複、商品化可能性をレビューする
+3. Codex が改善点を `/reports/automation-memory/claude-codex-handoff-memory.md` に記録する
+4. Claude Code Remote は次回実行時に改善点を反映する
+
+### 週次監査
+- Codexは週1回、`/workflows/weekly/codex-weekly-audit-sop.md` に従って横断監査する
+- 保存先は `/reports/YYYY-MM-DD-weekly-codex-audit.md`
+- オーナー判断事項は `/tasks/owner-decisions.md` に集約する
+
+### 禁止事項
+- Claude Code Remote と同じ時間帯に同じ調査を重複実行しない
+- Claude Code Remote が作成した同日ファイルを無断で上書きしない
+- 出典不明の情報を事実として扱わない
+- 外部投稿・公開・送信はオーナー承認後のみ行う
+
+### Codex への依頼テンプレート
+```md
+Claude Code Remote が作成した最新の `/research/` レポートを確認してください。
+出典・事実性・X投稿転用性・Note企画化の観点でレビューし、
+必要なら `/content/x/drafts/` と `/content/note/research/` に派生案を作ってください。
+既存ファイルは上書きしないでください。
+```
+
+---
+
 ## やってほしくないこと
 - 過度な技術的詳細の説明（必要な場合のみ）
 - 確認なしに重要ファイルを変更・削除すること

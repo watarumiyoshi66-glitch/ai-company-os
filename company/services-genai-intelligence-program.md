@@ -74,7 +74,9 @@
 
 実行SOP：`/workflows/daily/services-genai-intel-loop.md`
 
-- 毎日：各地域の「新着（資金調達/提携/規制/新機能）」を拾い、レーダーに追記
+- 毎日：Claude Code Remote の `daily-intel-loop` が作成する `/research/market/` と `/research/competitors/` を入口にする
+- 毎日：Services×GenAIに関係する「新着（資金調達/提携/規制/新機能）」だけを抽出し、レーダーに追記
+- 毎日：Codexレビュー時に、有料Note化・ソフトウェア化・重複有無を確認する
 - 週次：注目テーマを1つ選び、Company Cardsを10枚増やす
 - 月次：有料Note候補を3本、ソフトウェア仮説を1本に絞る
 

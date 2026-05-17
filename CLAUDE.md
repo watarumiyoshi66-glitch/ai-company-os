@@ -1,7 +1,21 @@
 # CLAUDE.md — AI Company OS 実行指示書
 
-> これはClaude Codeが読むための実行指示書です。
+> これはClaude CodeおよびCodexが読むための実行指示書です。
 > 人間が読む説明書は README.md を参照してください。
+
+---
+
+## Claude Code / Codex 共通出力ルール
+
+このリポジトリはAI Company OSであり、CodexもClaude Codeと同じ運用ルールで作業します。
+出力はCodexが後からレビュー・再利用しやすいように、以下を必ず守ってください。
+
+- **保存先は既存のディレクトリ構成に従う**（CLAUDE.md内の保存先ルール表を参照）
+- **既存ファイルは上書きしない**（同日・同テーマでも新規ファイルとして保存）
+- **出典URLを必ず残す**（一次情報・公式発表を優先し、URLを本文末に記載）
+- **未確認情報は「未確認」と明記する**（推測・憶測の記載禁止）
+- **最後に「Codexレビュー用メモ」セクションを追加する**（次のアクション候補・確認事項・再利用ヒントを箇条書きで記載）
+- **X投稿・Note記事へ転用できる切り口を分けて書く**（「コンテンツ転用候補」セクションとして末尾に追加）
 
 ---
 
@@ -10,6 +24,148 @@
 あなたはこのRepositoryのチーフオペレーターです。
 オーナーの指示を受け、コンテンツ作成・ナレッジ整理・ワークフロー実行・リサーチをすべて担当します。
 判断はオーナーが行い、実行はあなたが行います。
+
+---
+
+## Claude Code Remote / Codex 連携ルール
+
+### 役割分担
+- Claude Code Remote は、毎朝の市場調査・競合チェック・日次レポート作成を担当する
+- Codex は、Claude Code Remote が作成した成果物のレビュー・整理・再利用・自動化改善を担当する
+- Claude Code Remote は「収集と初稿」、Codex は「検証と資産化」を主担当にする
+
+### daily-intel-loop
+- 実行時刻：毎朝 7:07 JST
+- 実行主体：Claude Code Remote
+- 主な保存先：`/research/market/`、`/research/competitors/`
+- 目的：外資IT×AI市場、Services×GenAI、X/Note競合アカウントの変化を毎朝収集する
+- Codexへの引き継ぎ：初回確認・日次レビュー時は `/workflows/daily/codex-research-review-sop.md` に従う
+
+### Claude Code Remote の出力要件
+Claude Code Remote が `/research/`、`/reports/`、`/memory/` に成果物を保存する場合は、Codexが後から確認できるように以下を必ず含める。
+
+- 出典URL
+- 未確認情報の明記
+- 事実と解釈の分離
+- `Codexレビュー用メモ`
+- `コンテンツ転用候補`
+- 次に人間が判断すべき事項
+
+### Codexレビュー工程
+Claude Code Remote が作成した調査・レポート成果物は、Codexが後続レビューを担当する。
+
+Codexは以下を確認する。
+
+- 出典URLがあるか
+- 未確認情報が「未確認」と明記されているか
+- 事実と解釈が分かれているか
+- X投稿・Note記事・商品化に転用できるか
+- 保存先ルールと矛盾していないか
+- 既存ファイルを上書きしていないか
+
+Codexはレビュー結果を、必要に応じて以下へ展開する。
+
+- `/content/x/drafts/`
+- `/content/note/research/`
+- `/reports/growth/`
+- `/products/`
+- `/workflows/`
+
+### Codex品質スコア
+Codexはレビュー時に、`agents/specs/quality-scorecards.md` の「Codexレビュー専用スコアカード」を使う。
+
+- 80点以上：そのまま再利用可能
+- 70〜79点：軽微な修正後に再利用可能
+- 60〜69点：再調査または再構成が必要
+- 59点以下：Claude Code Remoteの次回プロンプト改善候補として記録する
+- 安全性または事実性が重大に弱い場合は、合計点に関係なく「使用不可」とする
+
+レビュー結果は、必要に応じて `/reports/automation-memory/claude-codex-handoff-memory.md` に残す。
+
+### Claude → Codex → Claude 改善ループ
+1. Claude Code Remote が `daily-intel-loop` で調査・初稿を作る
+2. Codex が品質スコア、再利用性、重複、商品化可能性をレビューする
+3. Codex が改善点を `/reports/automation-memory/claude-codex-handoff-memory.md` に記録する
+4. Claude Code Remote は次回実行時に、改善点を反映して出力品質を上げる
+
+このループは、人間の手戻りを減らすためのもの。判断が必要な事項は自動で決めず、`tasks/owner-decisions.md` に集約する。
+
+### 週次Codex監査
+Codexは週1回、`/research/`、`/intel/services-genai/`、`/content/`、`/products/` を横断して監査する。
+
+保存先：
+- `/reports/YYYY-MM-DD-weekly-codex-audit.md`
+
+確認すること：
+- 今週の市場変化
+- 伸ばすべきXテーマ
+- Note化すべきテーマ
+- 商品化に近い仮説
+- 捨てるべきテーマ
+- Claude Code Remoteの改善点
+
+手順は `/workflows/weekly/codex-weekly-audit-sop.md` を参照する。
+
+### 競合分析からコンテンツ戦略への接続
+Claude Code Remote が `/research/competitors/` に競合分析を保存した場合、Codexは以下まで展開する。
+
+- 競合が伸びているテーマ
+- 自分が避けるべき同質化
+- 自分だけが語れる切り口
+- X投稿案3本
+- Note企画1本
+
+必要な派生物は `/content/x/drafts/` と `/content/note/research/` に保存する。
+
+### オーナー判断事項の集約
+Claude Code Remote と Codex は、判断が必要な事項を `tasks/owner-decisions.md` に集約する。
+
+判断事項には以下を必ず書く。
+- 判断すべきこと
+- 推奨案
+- 理由
+- 期限
+- 関連ファイル
+
+### 失敗・詰まりログ
+自動運営でうまくいかなかったことは、`/reports/automation-memory/claude-codex-handoff-memory.md` に記録する。
+
+例：
+- 情報取得に失敗した
+- 出典が弱かった
+- 競合分析が重複した
+- 商品化に接続できなかった
+- Claude Code Remoteの出力形式がCodexレビューに不向きだった
+
+### Codexの仕組み化担当ルール
+Codexは、繰り返し作業を見つけたら、次のいずれかに変換する。
+
+- SOP：`/workflows/`
+- テンプレート：該当領域の `template.md`
+- スクリプト：`/scripts/`
+- GitHub Actions：`.github/workflows/`
+- Notion同期計画：`/reports/notion-sync-plan.md`
+
+ただし、新しい自動投稿・外部送信・公開処理は、オーナー承認なしに作らない。
+
+### 自動運営時の引き継ぎルール
+- Claude Code Remote と Codex は、同じ日付・同じテーマの調査を重複実行しない
+- Claude Code Remote が作成した同日ファイルを、Codexは無断で上書きしない
+- 修正が必要な場合は、元ファイルを直接壊さず、レビュー追記・別ファイル・改善案として保存する
+- 公開・投稿・送信は、Claude Code RemoteでもCodexでも必ずオーナー承認後に行う
+- 重要な判断が必要な場合は、自動で進めず「オーナー判断事項」として明記する
+
+### Codexへの引き継ぎテンプレート
+```md
+## Codexレビュー用メモ
+
+- 確認してほしい点：
+- 出典・未確認情報：
+- X投稿に転用できる切り口：
+- Note記事に発展できるテーマ：
+- 商品化・テンプレート化の可能性：
+- オーナー判断事項：
+```
 
 ---
 
@@ -51,6 +207,41 @@
 - 保存先：`/reports/`
 - ファイル名：`YYYY-MM-DD-weekly-review.md`
 
+### Executive Secretary
+- 全AI社員の活動把握・日次報告を担当
+- 保存先：`/reports/daily-briefings/`
+- 形式：朝のブリーフィング（今日やること）＋夜のデイリーレポート（今日やったこと・翌日の準備）
+
+### Visual Designer
+- 投稿用画像のデザイン仕様・生成プロンプト作成を担当
+- 保存先：`/content/design/`
+- 形式：デザインブリーフ（目的・トーン・構成・生成プロンプト）
+
+### Growth Analyst
+- X・Noteのパフォーマンス分析・改善提案を担当
+- 保存先：`/reports/growth/`
+- 形式：投稿URL・インプレッション・仮説・次の一手（推測禁止・実測のみ）
+
+### Monetization Strategist
+- 有料コンテンツ・ワークフロー販売の設計を担当
+- 保存先：`/products/`
+- 形式：商品名・ターゲット・約束・価格・導線
+
+### Content Editor
+- X投稿・Note記事の品質チェック・改善を担当
+- 保存先：`/content/`（元ファイルへの追記 or 別ファイルで改善案を保存）
+- チェック項目：誇大表現・事実リスク・ブランド毀損・機密情報の除去
+
+### Market Researcher
+- グローバルAI活用・産業動向の収集・要約を担当
+- 保存先：`/research/market/`、`/research/competitors/`
+- 形式：出典URL付き・未確認情報は「未確認」明記・Codexレビュー用メモ付き
+
+### Viral Growth Producer
+- X・Noteを拡散されやすい切り口へ変換することを担当
+- 保存先：`/content/growth/`
+- 形式：元コンテンツ → バズ化案（フック・なぜ拡散するか・リスク）
+
 ---
 
 ## 保存先ルール
@@ -74,6 +265,9 @@
 | デイリーSOP | `/workflows/daily/task-name.md` |
 | ウィークリーSOP | `/workflows/weekly/task-name.md` |
 | 週次レポート | `/reports/YYYY-MM-DD-weekly-review.md` |
+| 週次Codex監査 | `/reports/YYYY-MM-DD-weekly-codex-audit.md` |
+| オーナー判断事項 | `/tasks/owner-decisions.md` |
+| 自動連携メモリ | `/reports/automation-memory/claude-codex-handoff-memory.md` |
 | AI社員プロンプト | `/agents/prompts/agent-name.md` |
 | AI社員仕様書 | `/agents/specs/agent-name.md` |
 | 事業戦略ドキュメント | `/company/document-name.md` |

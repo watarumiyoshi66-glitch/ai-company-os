@@ -300,7 +300,7 @@
 # TODO: Services×GenAI 世界インテリジェンス（有料Note→ソフトウェア）
 
 - [x] `company/services-genai-intelligence-program.md` を運用開始（Teamの担当と成果物を固定）
-- [ ] 日次SOPを毎日回す（`workflows/daily/services-genai-intel-loop.md`）— 運用コミット（毎日実行）
+- [x] 日次SOPを毎日回す（`workflows/daily/services-genai-intel-loop.md`）— `daily-intel-loop` と接続して運用導線を固定
 - [x] 企業カードをまず30枚作る（スタートアップ20＋大中企業10）
 - [x] 有料Note候補を3本作り、1本に絞る（導線：有料Note→テンプレ→ソフト）— 推奨：v3（体験記型）
 
@@ -313,3 +313,125 @@
 - プログラム仕様: `company/services-genai-intelligence-program.md`
 - SOP: `workflows/daily/services-genai-intel-loop.md`
 - Intel保存先: `intel/services-genai/`
+- daily-intel-loop連携: `/research/market/` と `/research/competitors/` を入口にし、Services×GenAI関連材料だけを `intel/services-genai/` へ展開する
+- Codexレビュー連携: `workflows/daily/codex-research-review-sop.md` から本SOPへ接続
+
+---
+
+# TODO: Codex側 Claude Code Remote連携ルール追加
+
+- [x] 既存の `AGENTS.md` を確認する
+- [x] Claude Code RemoteとCodexの役割分担を追記する
+- [x] Codexのレビュー観点・禁止事項・依頼テンプレートを追記する
+- [x] `tasks/todo.md` に作業記録を残す
+- [x] 追記内容を検証する
+
+## 方針
+- Claude Code Remoteは毎朝の市場調査・競合チェックを担当する
+- Codexは成果物のレビュー・整理・X投稿案化・Note企画化・自動化改善を担当する
+- 同じ日付の調査ファイルを重複作成せず、既存ファイルを無断上書きしない
+
+## レビュー
+- 追記先: `AGENTS.md`
+- 追加内容: Claude Code Remoteとの役割分担、Codexの担当範囲、レビュー観点、禁止事項、依頼テンプレート
+- 検証: `rg "Claude Code Remote|Codex の担当範囲|Codex への依頼テンプレート" AGENTS.md tasks/todo.md` で主要キーワードを確認
+
+---
+
+# TODO: CLAUDE.mdにClaude Code Remote / Codex連携ルール追記
+
+- [x] 既存の `CLAUDE.md` を確認する
+- [x] Claude Code RemoteとCodexの役割分担を追記する
+- [x] Claude Code Remoteの出力要件を追記する
+- [x] Codexレビュー工程と展開先を追記する
+- [x] 自動運営時の引き継ぎルールを追記する
+- [x] 追記内容を検証する
+
+## 方針
+- Claude Code Remoteは「収集と初稿」、Codexは「検証と資産化」を主担当にする
+- Codexがレビューしやすいよう、出典・未確認情報・コンテンツ転用候補・オーナー判断事項を明記させる
+- 重複実行と無断上書きを避け、Markdownを正本として安全に自動運営する
+
+## レビュー
+- 追記先: `CLAUDE.md`
+- 追加位置: `Claude Codeの役割` の直後
+- 追加内容: 役割分担、出力要件、Codexレビュー工程、自動運営時の引き継ぎルール、引き継ぎテンプレート
+- 検証: `rg "Claude Code Remote / Codex 連携ルール|Codexレビュー工程|自動運営時の引き継ぎルール|Codexへの引き継ぎテンプレート" CLAUDE.md tasks/todo.md` で主要キーワードを確認
+
+---
+
+# TODO: daily-intel-loop後のCodexレビュー導線整備
+
+- [x] READMEに毎朝7:07 JSTの `daily-intel-loop` を追記する
+- [x] READMEにClaude Code Remote / Codex Operationsを追記する
+- [x] CLAUDE.mdに `daily-intel-loop` の実行時刻・保存先・目的を追記する
+- [x] AGENTS.mdにCodexレビューSOPへの参照を追記する
+- [x] `workflows/daily/codex-research-review-sop.md` を作成する
+- [x] 追記内容を検証する
+
+## 方針
+- Claude Code Remoteは毎朝7:07 JSTに市場調査・競合チェックを収集する
+- Codexは初回実行後または依頼時に、出典・事実性・再利用性をレビューする
+- レビュー結果はX投稿案、Note企画、商品化案、運用改善へ展開する
+- 既存ファイルは上書きせず、Markdownを正本として安全に運用する
+
+## レビュー
+- 追記先: `README.md`, `CLAUDE.md`, `AGENTS.md`
+- 追加SOP: `workflows/daily/codex-research-review-sop.md`
+- 追加内容: 7:07 JST実行、保存先、Codexレビュー手順、派生ファイル保存先、禁止事項
+- 検証: `rg "7:07|daily-intel-loop|codex-research-review-sop|Claude Code Remote / Codex Operations" README.md CLAUDE.md AGENTS.md workflows/daily/codex-research-review-sop.md tasks/todo.md` で主要キーワードを確認
+
+---
+
+# TODO: Services×GenAI SOPとdaily-intel-loopの統合
+
+- [x] 既存のServices×GenAI SOPとプログラム仕様を確認する
+- [x] `daily-intel-loop` をServices×GenAI調査の入口として明記する
+- [x] Services×GenAI SOPを「抽出・補強・商品化」中心に更新する
+- [x] Codex Research Review SOPにServices×GenAI展開観点を追加する
+- [x] `tasks/todo.md` の未完了タスクを運用導線固定として完了扱いに更新する
+- [x] 追記内容を検証する
+
+## 方針
+- 広域調査はClaude Code Remoteの `daily-intel-loop` に任せる
+- Services×GenAI SOPは、広域調査からSales×生成AIに関係する材料を抽出する役にする
+- Codexは、有料Note化・ソフトウェア化・重複確認を担当する
+- 該当材料がない日は、無理に作らず「該当なし」と記録する
+
+## レビュー
+- 更新SOP: `workflows/daily/services-genai-intel-loop.md`
+- 更新仕様: `company/services-genai-intelligence-program.md`
+- 更新SOP: `workflows/daily/codex-research-review-sop.md`
+- 変更内容: `daily-intel-loop` 起点、Services×GenAI抽出、Codexレビュー連携、商品化導線
+- 検証: `rg "daily-intel-loop|Services×GenAI|有料Note|ソフトウェア化|該当なし" workflows/daily/services-genai-intel-loop.md company/services-genai-intelligence-program.md workflows/daily/codex-research-review-sop.md tasks/todo.md` で主要キーワードを確認
+
+---
+
+# TODO: Claude Code Remote / Codex 自動連携強化
+
+- [x] `CLAUDE.md` にCodex品質スコア制度を追記する
+- [x] `CLAUDE.md` にClaude → Codex → Claude改善ループを追記する
+- [x] `CLAUDE.md` に週次Codex監査、競合分析のコンテンツ戦略化、判断事項集約、失敗ログ、仕組み化担当ルールを追記する
+- [x] `agents/specs/quality-scorecards.md` にCodexレビュー専用スコアカードを追加する
+- [x] `workflows/daily/daily-plan-template.md` にCodexレビュー枠を追加する
+- [x] `workflows/daily/codex-research-review-sop.md` に品質採点、競合戦略、判断事項、改善メモを追加する
+- [x] `workflows/weekly/codex-weekly-audit-sop.md` を追加する
+- [x] `reports/weekly-codex-audit-template.md` を追加する
+- [x] `reports/automation-memory/claude-codex-handoff-memory.md` を追加する
+- [x] `tasks/owner-decisions.md` を追加する
+- [x] READMEに週次監査と判断事項の参照を追記する
+- [x] 追記内容を検証する
+
+## 方針
+- Claude Code Remoteは日次の収集と初稿を担当する
+- Codexは品質採点、競合戦略化、商品化、週次監査、仕組み化を担当する
+- 両者の連携は、Markdownの共有ファイルを介して自動運営しやすくする
+- オーナー判断が必要なことは `tasks/owner-decisions.md` に集約する
+
+## レビュー
+- 更新: `CLAUDE.md`, `README.md`, `agents/specs/quality-scorecards.md`, `workflows/daily/daily-plan-template.md`, `workflows/daily/codex-research-review-sop.md`
+- 追加: `workflows/weekly/codex-weekly-audit-sop.md`
+- 追加: `reports/weekly-codex-audit-template.md`
+- 追加: `reports/automation-memory/claude-codex-handoff-memory.md`
+- 追加: `tasks/owner-decisions.md`
+- 検証: `rg "Codex品質スコア|Claude → Codex → Claude|週次Codex監査|owner-decisions|claude-codex-handoff|Codexレビュー専用スコアカード" CLAUDE.md README.md agents/specs/quality-scorecards.md workflows reports tasks` で主要キーワードを確認

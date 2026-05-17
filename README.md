@@ -55,6 +55,8 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 ```
 07:00  Daily Plan作成（Claude）
        └─ 当日のX投稿・リサーチ・タスクを確認
+07:07  daily-intel-loop（Claude Code Remote）
+       └─ 市場調査・競合チェックを /research/market/ と /research/competitors/ に保存
 07:15  秘書官による朝のブリーフィング
        └─ 今日の優先事項・判断事項・未完了タスクを整理
 08:00  X投稿（下書き確認 → 人間承認 → 投稿）
@@ -67,6 +69,30 @@ SAP・Salesforce・ServiceNow等の商談・提案・交渉ノウハウを体系
 21:30  AI経営会議
        └─ 収益改善・チーム改善・社長判断事項を /reports/boardroom/ と /reports/ceo-office/ に記録
 ```
+
+---
+
+## Claude Code Remote / Codex Operations
+
+Claude Code Remoteは毎朝7:07 JSTに `daily-intel-loop` を実行し、市場調査と競合チェックの初稿を作る。
+Codexはその成果物をレビューし、X投稿案・Note企画・商品化アイデア・自動化改善へ展開する。
+
+| 担当 | 主な役割 | 保存先 |
+|---|---|---|
+| Claude Code Remote | 市場調査・競合チェックの収集と初稿作成 | `/research/market/`, `/research/competitors/` |
+| Codex | 出典・事実性・再利用性のレビュー | `/reports/growth/`, `/tasks/todo.md` |
+| Codex | X投稿案・Note企画への変換 | `/content/x/drafts/`, `/content/note/research/` |
+| Codex | 繰り返し作業のSOP化・自動化改善 | `/workflows/`, `/scripts/` |
+| Codex | 週次監査・オーナー判断事項の整理 | `/reports/YYYY-MM-DD-weekly-codex-audit.md`, `/tasks/owner-decisions.md` |
+
+運用ルール：
+- Claude Code Remoteは、出典URL、未確認情報、事実と解釈の分離、`Codexレビュー用メモ`、`コンテンツ転用候補` を必ず残す
+- Codexは、同じ日付・同じテーマの調査を重複実行しない
+- Codexは、Claude Code Remoteが作成した同日ファイルを無断で上書きしない
+- 公開・投稿・送信は、どちらのAIでもオーナー承認後のみ行う
+- Codexレビュー手順は `/workflows/daily/codex-research-review-sop.md` を参照する
+- 週次監査は `/workflows/weekly/codex-weekly-audit-sop.md` を参照する
+- 判断事項は `/tasks/owner-decisions.md` に集約する
 
 ---
 
