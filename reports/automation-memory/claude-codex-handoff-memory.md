@@ -2,6 +2,9 @@
 
 目的：Claude Code Remoteの出力品質とCodexレビュー品質を継続改善するための共有メモリ。
 
+Claude Code Remoteは次回実行時にこのファイルを確認し、直近の「Claude Code Remoteへの改善指示」をプロンプト改善に反映する。
+Codexはレビュー時に見つけた改善点をこのファイルへ追記し、Claude Code Remoteが次回の `daily-intel-loop` で同じ失敗を繰り返さないようにする。
+
 ## 記録ルール
 
 - Claude Code Remoteの出力で改善が必要な点を記録する
