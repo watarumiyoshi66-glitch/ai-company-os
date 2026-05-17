@@ -148,6 +148,25 @@ Codexは、繰り返し作業を見つけたら、次のいずれかに変換す
 
 ただし、新しい自動投稿・外部送信・公開処理は、オーナー承認なしに作らない。
 
+### 平日自動運営パッケージ
+平日はオーナーが忙しい前提で、Claude Code RemoteとCodexは以下の5つを自動連携で進める。
+オーナーは原則として `tasks/owner-decisions.md` とDaily CEO Digestだけを確認する。
+
+| パッケージ | 実行主体 | 目的 | SOP |
+|---|---|---|---|
+| Daily CEO Digest | Claude Code Remote | 1日分の判断事項を5分で読める形にする | `/workflows/daily/daily-ceo-digest-sop.md` |
+| AI社員 週次提案会議 | Claude Code Remote + Codex | AI社員から提案を集め、上位3件に絞る | `/workflows/weekly/ai-employee-proposals-sop.md` |
+| X投稿 半自動パイプライン | Claude Code Remote + Codex | 3案作成し、Codexが1案を推奨する | `/workflows/daily/x-post-semi-auto-pipeline.md` |
+| Note候補 週次自動生成 | Claude Code Remote + Codex | Note候補3本と推奨1本を作る | `/workflows/weekly/note-candidates-sop.md` |
+| Services×GenAI 商品化レーダー | Codex | 有料Note・テンプレート・ソフトウェア仮説へ分類する | `/workflows/weekly/services-genai-monetization-radar-sop.md` |
+
+共通ルール：
+- 生成物は必ずMarkdownで保存する
+- オーナー判断が必要なものは `tasks/owner-decisions.md` に集約する
+- 公開・投稿・送信はオーナー承認後のみ行う
+- Codexは品質採点、重複確認、商品化可能性、改善メモ記録を担当する
+- Claude Code Remoteは毎日の収集・初稿・Digest化を担当する
+
 ### 自動運営時の引き継ぎルール
 - Claude Code Remote と Codex は、同じ日付・同じテーマの調査を重複実行しない
 - Claude Code Remote が作成した同日ファイルを、Codexは無断で上書きしない
@@ -251,6 +270,7 @@ Codexは、繰り返し作業を見つけたら、次のいずれかに変換す
 | X投稿下書き | `/content/x/drafts/YYYY-MM-DD-topic.md` |
 | デザインブリーフ・画像プロンプト | `/content/design/YYYY-MM-DD-topic-design-brief.md` |
 | グロースレポート | `/reports/growth/YYYY-MM-DD-growth-report.md` |
+| CEO Digest | `/reports/ceo-office/YYYY-MM-DD-ceo-digest.md` |
 | 市場インテリジェンスレポート | `/research/market/YYYY-MM-DD-market-intel.md` |
 | 商品設計書 | `/products/product-name.md` |
 | X投稿パフォーマンス | `/content/x/performance/YYYY-MM-DD.md` |
@@ -266,6 +286,9 @@ Codexは、繰り返し作業を見つけたら、次のいずれかに変換す
 | ウィークリーSOP | `/workflows/weekly/task-name.md` |
 | 週次レポート | `/reports/YYYY-MM-DD-weekly-review.md` |
 | 週次Codex監査 | `/reports/YYYY-MM-DD-weekly-codex-audit.md` |
+| AI社員週次提案 | `/reports/boardroom/YYYY-MM-DD-ai-employee-proposals.md` |
+| 週次Note候補 | `/content/note/research/YYYY-MM-DD-weekly-note-candidates.md` |
+| Services×GenAI商品化マップ | `/products/services-genai-weekly-monetization-map.md` |
 | オーナー判断事項 | `/tasks/owner-decisions.md` |
 | 自動連携メモリ | `/reports/automation-memory/claude-codex-handoff-memory.md` |
 | AI社員プロンプト | `/agents/prompts/agent-name.md` |

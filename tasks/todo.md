@@ -435,3 +435,34 @@
 - 追加: `reports/automation-memory/claude-codex-handoff-memory.md`
 - 追加: `tasks/owner-decisions.md`
 - 検証: `rg "Codex品質スコア|Claude → Codex → Claude|週次Codex監査|owner-decisions|claude-codex-handoff|Codexレビュー専用スコアカード" CLAUDE.md README.md agents/specs/quality-scorecards.md workflows reports tasks` で主要キーワードを確認
+
+---
+
+# TODO: 平日自動運営パッケージ追加
+
+- [x] Daily CEO Digest SOPとテンプレートを追加する
+- [x] AI社員 週次提案会議SOPとテンプレートを追加する
+- [x] X投稿 半自動パイプラインSOPを追加する
+- [x] Note候補 週次自動生成SOPとテンプレートを追加する
+- [x] Services×GenAI 商品化レーダーSOPとテンプレートを追加する
+- [x] `CLAUDE.md` にClaude Code Remote / Codexの自動運営パッケージとして反映する
+- [x] `README.md` に平日自動運営の一覧を追加する
+- [x] 変更を検証し、GitHubへ反映する
+
+## 方針
+- 平日はオーナーが忙しい前提で、見る場所をDaily CEO Digestと `tasks/owner-decisions.md` に寄せる
+- Claude Code Remoteは毎日の収集・初稿・Digest化を担当する
+- Codexは品質採点・優先順位付け・商品化分類・改善メモを担当する
+- 投稿、公開、送信はオーナー承認後のみ行う
+
+## レビュー
+- 追加SOP: `workflows/daily/daily-ceo-digest-sop.md`
+- 追加SOP: `workflows/weekly/ai-employee-proposals-sop.md`
+- 追加SOP: `workflows/daily/x-post-semi-auto-pipeline.md`
+- 追加SOP: `workflows/weekly/note-candidates-sop.md`
+- 追加SOP: `workflows/weekly/services-genai-monetization-radar-sop.md`
+- 追加テンプレート: `reports/ceo-office/ceo-digest-template.md`
+- 追加テンプレート: `reports/boardroom/ai-employee-proposals-template.md`
+- 追加テンプレート: `content/note/research/weekly-note-candidates-template.md`
+- 追加テンプレート: `products/services-genai-weekly-monetization-map-template.md`
+- 検証: `rg "Daily CEO Digest|AI社員 週次提案|X投稿 半自動|Note候補 週次|Services×GenAI 商品化" CLAUDE.md README.md workflows reports content products tasks` で主要キーワードを確認
